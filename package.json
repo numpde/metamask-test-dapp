@@ -1,7 +1,7 @@
 {
-  "name": "@metamask/test-dapp",
-  "version": "5.1.1",
-  "description": "A simple dapp used in MetaMask e2e tests.",
+  "name": "@numpde/metamask-test-dapp",
+  "version": "5.1.2",
+  "description": "A simple dapp used in MetaMask e2e tests (forked).",
   "engines": {
     "node": ">= 12.0.0"
   },
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MetaMask/test-dapp.git"
+    "url": "git+https://github.com/numpde/metamask-test-dapp.git"
   },
   "files": [
     "dist/"
@@ -30,9 +30,9 @@
   "author": "MetaMask",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/MetaMask/test-dapp/issues"
+    "url": "https://github.com/numpde/metamask-test-dapp/issues"
   },
-  "homepage": "https://metamask.github.io/test-dapp",
+  "homepage": "https://numpde.github.io/test-dapp",
   "dependencies": {},
   "devDependencies": {
     "@lavamoat/allow-scripts": "^1.0.6",
