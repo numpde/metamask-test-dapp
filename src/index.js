@@ -1024,7 +1024,9 @@ const initialize = async () => {
   signTypedDataV4.onclick = async () => {
     const networkId = parseInt(networkDiv.innerHTML, 10);
     const chainId = parseInt(chainIdDiv.innerHTML, 16) || networkId;
-    const signTypedDataV4Input = document.getElementById('signTypedDataV4Input');
+    const signTypedDataV4Input = document.getElementById(
+      'signTypedDataV4Input',
+    );
     if (signTypedDataV4Input.value === '') {
       signTypedDataV4Input.value = JSON.stringify(`
         {
