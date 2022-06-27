@@ -1028,10 +1028,10 @@ const initialize = async () => {
       'signTypedDataV4Input',
     );
     if (signTypedDataV4Input.value === '') {
-      signTypedDataV4Input.value = JSON.stringify(`
+      signTypedDataV4Input.value = JSON.stringify(
         {
           domain: {
-            chainId: ${chainId.toString()},
+            chainId: chainId.toString(),
             name: 'Ether Mail',
             verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
             version: '1',
@@ -1079,7 +1079,7 @@ const initialize = async () => {
             ],
           },
         }
-      `);
+      );
     }
     const msgParams = JSON.parse(signTypedDataV4Input.value);
     try {
