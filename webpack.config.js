@@ -25,7 +25,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          flatten: false,
+          flatten: true,
           from: './src/*',
           globOptions: {
             ignore: ['**/*.js'],
