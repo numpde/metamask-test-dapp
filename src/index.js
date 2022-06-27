@@ -1024,9 +1024,9 @@ const initialize = async () => {
   signTypedDataV4.onclick = async () => {
     const networkId = parseInt(networkDiv.innerHTML, 10);
     const chainId = parseInt(chainIdDiv.innerHTML, 16) || networkId;
-    const signTypedDataV4_input = document.getElementById('signTypedDataV4_input');
-    if (signTypedDataV4_input.value === '') {
-      signTypedDataV4_input.value = JSON.stringify(`
+    const signTypedDataV4Input = document.getElementById('signTypedDataV4Input');
+    if (signTypedDataV4Input.value === '') {
+      signTypedDataV4Input.value = JSON.stringify(`
         {
           domain: {
             chainId: chainId.toString(),
@@ -1079,7 +1079,7 @@ const initialize = async () => {
         }
       `);
     }
-    const msgParams = JSON.parse(signTypedDataV4_input.value);
+    const msgParams = JSON.parse(signTypedDataV4Input.value);
     try {
       const from = accounts[0];
       const sign = await ethereum.request({
