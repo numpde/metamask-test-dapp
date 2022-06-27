@@ -1029,7 +1029,7 @@ const initialize = async () => {
       signTypedDataV4Input.value = JSON.stringify(`
         {
           domain: {
-            chainId: %chainId,
+            chainId: ${chainId.toString()},
             name: 'Ether Mail',
             verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
             version: '1',
