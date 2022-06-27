@@ -1028,58 +1028,56 @@ const initialize = async () => {
       'signTypedDataV4Input',
     );
     if (signTypedDataV4Input.value === '') {
-      signTypedDataV4Input.value = JSON.stringify(
-        {
-          domain: {
-            chainId: chainId.toString(),
-            name: 'Ether Mail',
-            verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
-            version: '1',
+      signTypedDataV4Input.value = JSON.stringify({
+        domain: {
+          chainId: chainId.toString(),
+          name: 'Ether Mail',
+          verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
+          version: '1',
+        },
+        message: {
+          contents: 'Hello, Bob!',
+          from: {
+            name: 'Cow',
+            wallets: [
+              '0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826',
+              '0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF',
+            ],
           },
-          message: {
-            contents: 'Hello, Bob!',
-            from: {
-              name: 'Cow',
+          to: [
+            {
+              name: 'Bob',
               wallets: [
-                '0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826',
-                '0xDeaDbeefdEAdbeefdEadbEEFdeadbeEFdEaDbeeF',
+                '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
+                '0xB0BdaBea57B0BDABeA57b0bdABEA57b0BDabEa57',
+                '0xB0B0b0b0b0b0B000000000000000000000000000',
               ],
             },
-            to: [
-              {
-                name: 'Bob',
-                wallets: [
-                  '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
-                  '0xB0BdaBea57B0BDABeA57b0bdABEA57b0BDabEa57',
-                  '0xB0B0b0b0b0b0B000000000000000000000000000',
-                ],
-              },
-            ],
-          },
-          primaryType: 'Mail',
-          types: {
-            EIP712Domain: [
-              { name: 'name', type: 'string' },
-              { name: 'version', type: 'string' },
-              { name: 'chainId', type: 'uint256' },
-              { name: 'verifyingContract', type: 'address' },
-            ],
-            Group: [
-              { name: 'name', type: 'string' },
-              { name: 'members', type: 'Person[]' },
-            ],
-            Mail: [
-              { name: 'from', type: 'Person' },
-              { name: 'to', type: 'Person[]' },
-              { name: 'contents', type: 'string' },
-            ],
-            Person: [
-              { name: 'name', type: 'string' },
-              { name: 'wallets', type: 'address[]' },
-            ],
-          },
-        }
-      );
+          ],
+        },
+        primaryType: 'Mail',
+        types: {
+          EIP712Domain: [
+            { name: 'name', type: 'string' },
+            { name: 'version', type: 'string' },
+            { name: 'chainId', type: 'uint256' },
+            { name: 'verifyingContract', type: 'address' },
+          ],
+          Group: [
+            { name: 'name', type: 'string' },
+            { name: 'members', type: 'Person[]' },
+          ],
+          Mail: [
+            { name: 'from', type: 'Person' },
+            { name: 'to', type: 'Person[]' },
+            { name: 'contents', type: 'string' },
+          ],
+          Person: [
+            { name: 'name', type: 'string' },
+            { name: 'wallets', type: 'address[]' },
+          ],
+        },
+      });
     }
     const msgParams = JSON.parse(signTypedDataV4Input.value);
     try {
