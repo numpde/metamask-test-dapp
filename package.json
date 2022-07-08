@@ -33,7 +33,9 @@
     "url": "https://github.com/numpde/metamask-test-dapp/issues"
   },
   "homepage": "https://numpde.github.io/test-dapp",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  },
   "devDependencies": {
     "@lavamoat/allow-scripts": "^2.0.3",
     "@metamask/auto-changelog": "^2.5.0",
